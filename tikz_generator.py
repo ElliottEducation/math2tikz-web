@@ -34,7 +34,6 @@ def _wrap_plot(expr: str, domain: str = "-2:2") -> str:
     axis lines = center,
     xlabel = $x$, ylabel = $y$,
 ]
-\addplot[domain={domain}, samples=200, color=blue] {{{expr}}};
+\addplot[domain={domain}, samples=200, color=blue] {{{{{expr}}}}};
 \end{{axis}}
 \end{{tikzpicture}}"""
-
