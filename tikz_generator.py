@@ -29,11 +29,12 @@ def generate_tikz_code(formula: str) -> str:
         return "% Unsupported function. Try something like y = sin(x)"
 
 def _wrap_plot(expr: str, domain: str = "-2:2") -> str:
-    return fr"""\begin{tikzpicture}
-\begin{axis}[
+    return fr"""\begin{{tikzpicture}}
+\begin{{axis}}[
     axis lines = center,
     xlabel = $x$, ylabel = $y$,
 ]
 \addplot[domain={domain}, samples=200, color=blue] {{{expr}}};
-\end{axis}
-\end{tikzpicture}"""
+\end{{axis}}
+\end{{tikzpicture}}"""
+
